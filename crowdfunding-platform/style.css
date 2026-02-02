@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #111;
+    color: white;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    padding: 8px 16px;
+    background: #00d5ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ================= HERO / BASE ================= */
+
+.base {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg,#00d5ff, #ffb347);
+    color: white;
+}
+
+.explore-btn {
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: #111;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.category-card {
+    padding: 12px 25px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    background: #00d5ff;
+    color: white;
+}
+
+/* ================= CAMPAIGN LIST ================= */
+
+.campaign-list-section {
+    padding: 40px 25px;
+}
+
+.campaign-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.campaign-card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.campaign-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.campaign-card h3 {
+    margin-bottom: 10px;
+}
+
+.campaign-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #00d5ff;
+    font-weight: 600;
+}
+
+/* ================= PROGRESS BAR ================= */
+
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    height: 6px;
+    border-radius: 4px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 6px;
+    background: #00d5ff;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* ================= AUTH MODAL ================= */
+
+.auth-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.auth-modal {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.auth-modal h2 {
+    margin-bottom: 15px;
+}
+
+.auth-modal input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 8px 0 12px 0;
+    font-size: 15px;
+}
+
+.google-btn {
+    width: 100%;
+    margin-top: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-btn img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.auth-link {
+    color: #00d5ff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.close-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ddd;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* ================= CREATE CAMPAIGN ================= */
+
+.create-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#createCampaignForm label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+#createCampaignForm input,
+#createCampaignForm textarea,
+#createCampaignForm select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+#createCampaignForm textarea {
+    height: 120px;
+    resize: none;
+}
+
+.create-btn {
+    margin-top: 20px;
+    width: 100%;
+    background: #00d5ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ================= CAMPAIGN PAGE ================= */
+
+.campaign-page-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.campaign-page-container h2 {
+    margin-bottom: 10px;
+}
+
+.campaign-page-container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* ================= TRANSACTIONS ================= */
+
+.transaction-section {
+    padding: 30px;
+}
+
+.tx-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tx-card .hash {
+    font-size: 12px;
+    word-break: break-all;
+    color: #666;
+}
+
+

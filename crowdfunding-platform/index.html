@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfund</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" data-aos="fade-down">
+        <div class="logo">Crowdfund</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pages/create.html">Create</a>
+            <a href="pages/dashboard.html">Dashboard</a>
+            <button class="login-btn" onclick="openAuthModal()">Login</button>
+        </div>
+    </nav>
+
+    <!--AUTHENTICATION-->
+    <div class="auth-backdrop" id="authBackdrop" style="display:none;">
+        <div class="auth-modal">
+            <h2 id="authTitle">Login</h2>
+
+            <input type="email" id="authEmail" placeholder="Email">
+            <input type="password" id="authPassword" placeholder="Password">
+
+            <button onclick="handleAuthSubmit()" class="login-btn">Continue</button>
+
+            <button class="google-btn" onclick="googleLogin()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg">
+                Continue with Google
+            </button>
+
+            <p id="authToggleText">
+                Don't have an account?
+                <span onclick="switchToSignup()" class="auth-link">Sign up</span>
+            </p>
+
+            <button onclick="closeAuthModal()" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- BASE -->
+    <section class="base">
+        <h1 data-aos="fade-right">Fund The Needy</h1>
+        <p data-aos="fade-left">Discover impactful campaigns and help make dreams come alive.</p>
+        <button class="explore-btn" data-aos="zoom-in">Explore Campaigns</button>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+        <h2 data-aos="fade-up">Browse by Category</h2>
+        <div class="category-container">
+            <div class="category-card" data-aos="zoom-in">Education</div>
+            <div class="category-card" data-aos="zoom-in" data-aos-delay="200">Environment</div>
+            <div class="category-card" data-aos="zoom-in" data-aos-delay="400">Health</div>
+            <div class="category-card" data-aos="zoom-in" data-aos-delay="600">Tech</div>
+            <div class="category-card" data-aos="zoom-in" data-aos-delay="800">Art</div>
+        </div>
+    </section>
+
+    <!-- CAMPAIGNS -->
+     
+    <section class="campaign-list-section">
+        <h2 data-aos="fade-right">Featured Campaigns</h2>
+        <div class="campaign-list" id="campaigns" data-aos="fade-right" data-aos-delay="200"></div>
+    </section>
+
+    
+
+
+
+
+    <!-- JS -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
+
+
+
+
